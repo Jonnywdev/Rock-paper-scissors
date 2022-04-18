@@ -9,18 +9,17 @@ def main():
 
     print("Welcome to Rock | paper | scissors!")
     print("rules: \n")
-    print("rock beats scissors, paper beats \
-    rock and scissors beats paper.")
+    print("rock beats scissors, paper beats rock and scissors beats paper.")
     print("Play by choosing and entering either rock, paper or scissors.")
-    print("Please make sure that you enter one of the 3 \n \
-        options as any other entry will not be valid.\n")
+    print("Please make sure that you enter one of the \n")
+    print("3 options as any other entry will not be valid.\n")
 
     def get_username():
         """
         This function will be used to get the players username.
         """
-        username = input("Please enter a username to get started\n")
-        return username
+        username = input("Please enter a username to get started \n")
+        return username 
 
     def get_winning_response():
         """
@@ -55,25 +54,25 @@ def main():
 
     def has_won(player, opponent):
         """
-        This function will be used to figure out who has won the 
+        This function will be used to figure out who has won the
         round either the user or the opponent
         """
         if (player == "rock" and opponent == "scissors") or \
            (player == "scissors" and opponent == "paper") \
            or (player == "paper" and opponent == "rock"):
             return True
-    
+  
     players_score = 0
     computers_score = 0
 
     username = get_username()
-    print(f"Welcome to Rock | Paper | Scissors {username}, \
+    print(f"\nWelcome to Rock | Paper | Scissors {username}! \n \
     we hope you have a fun time")
 
     while True:
         try:
             input_choices = {"rock", "paper", "scissors"}
-            players_input = input("Please type your choice")
+            players_input = input("Please type your choice ").lower()
 
             winning_response = get_winning_response()
             losing_response = get_losing_response()
@@ -87,23 +86,23 @@ def main():
                 has_won(players_input, computers_choice)
                 if players_input == computers_choice:
                     print("Ahh it's a draw! \n")
-                    print(f"{username} score is: {players_score} \
+                    print(f"{username} your score is: {players_score} \
                         \nComputers score is: {computers_score}\n")
                 elif has_won(players_input, computers_choice):
                     print(f"You did it, you won! \n {winning_response} \n")
                     players_score = players_score + 1
-                    print(f"{username} score is: {players_score} \
+                    print(f"{username} your score is: {players_score} \
                         \nComputers score is: {computers_score}\n")
                 elif has_won(computers_choice, players_input):
                     print(f"You lose! \n{losing_response} \n")
-                    computers_score = computers_score + 1 
-                    print(f"{username} score is: {players_score} \
+                    computers_score = computers_score + 1
+                    print(f"{username} your score is: {players_score} \
                         \nComputers score is: {computers_score}\n")
             else:
                 raise ValueError()
         except ValueError:
             print(f"Unfortunately that input was not valid\n Your input was {players_input}\n \
                 Please enter either rock, paper or scissors!")
-      
-                    
+
+
 main()
