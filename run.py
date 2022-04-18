@@ -11,3 +11,21 @@ def main():
     print("Play by choosing and entering either rock, paper or scissors.")
     print("Please make sure that you enter one of the 3 \
         options as any other entry will not be valid.\n")
+
+    def get_username():
+        """
+        This function will be used to get the players username.
+        """
+        username = input("Please enter a username to get started\n")
+        return username
+
+    def get_winning_response():
+
+    
+    def get_losing_response():
+
+
+    def has_won():
+
+
+    
