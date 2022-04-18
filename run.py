@@ -1,3 +1,5 @@
+import random
+
 def main():
     """
     This is the main function that will be used to run the game and
@@ -23,13 +25,14 @@ def main():
         """
         This function will produce a random response if the player wins a round.
         """
-        list_of_winning_responses = ["Well done!", "Wooo go you!", "That was impressive.", "Are you reading my mind?", "No way, how did you do that?", "Congratulations that a point to you.", "Expertly Done!",]
+        list_of_winning_responses = ["Well done!", "Wooo go you!", "That was impressive.", "Are you reading my mind?", "No way, how did you do that?", "Congratulations that a point to you.", "Expertly Done!"]
 
     
     def get_losing_response():
+        """
+        This function will produce a random response if the player loses a round.
+        """
+        list_of_losing_responses = ["Unlucky!", "Oh no!", "What are you playing at? ;)", "Maybe you'll get it right next time?", "Better luck next time", "uh oh", "You need to get better at guessing"]
 
 
     def has_won():
-
-
-    
