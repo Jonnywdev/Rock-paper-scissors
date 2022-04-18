@@ -20,6 +20,10 @@ def main():
         return username
 
     def get_winning_response():
+        """
+        This function will produce a random response if the player wins a round.
+        """
+        list_of_winning_responses = ["Well done!", "Wooo go you!", "That was impressive.", "Are you reading my mind?", "No way, how did you do that?", "Congratulations that a point to you.", "Expertly Done!",]
 
     
     def get_losing_response():
