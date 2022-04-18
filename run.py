@@ -1,5 +1,6 @@
 import random
 
+
 def main():
     """
     This is the main function that will be used to run the game and
@@ -11,7 +12,7 @@ def main():
     print("rock beats scissors, paper beats \
     rock and scissors beats paper.")
     print("Play by choosing and entering either rock, paper or scissors.")
-    print("Please make sure that you enter one of the 3 \
+    print("Please make sure that you enter one of the 3 \n \
         options as any other entry will not be valid.\n")
 
     def get_username():
@@ -23,34 +24,51 @@ def main():
 
     def get_winning_response():
         """
-        This function will produce a random response if the player wins a round.
+        This function will produce a random
+        response if the player wins a round.
         """
-        list_of_winning_responses = ["Well done!", "Wooo go you!", "That was impressive.", "Are you reading my mind?", "No way, how did you do that?", "Congratulations that a point to you.", "Expertly Done!"]
+        list_of_winning_responses = ["Well done!", "Wooo go you!",
+                                     "That was impressive.",
+                                     "Are you reading my mind?",
+                                     "No way, how did you do that?",
+                                     "Congratulations that a point to you.",
+                                     "Expertly Done!"]
 
         show_winning_response = random.choice(list_of_winning_responses)
         return show_winning_response
     
     def get_losing_response():
         """
-        This function will produce a random response if the player loses a round.
+        This function will produce a random
+        response if the player loses a round.
         """
-        list_of_losing_responses = ["Unlucky!", "Oh no!", "What are you playing at? ;)", "Maybe you'll get it right next time?", "Better luck next time", "uh oh", "You need to get better at guessing"]
+        list_of_losing_responses = ["Unlucky!",
+                                    "Oh no!",
+                                    "What are you playing at? ;)",
+                                    "Maybe you'll get it right next time?",
+                                    "Better luck next time",
+                                    "uh oh",
+                                    "You need to get better at guessing"]
 
         show_losing_response = random.choice(list_of_losing_responses)
         return show_losing_response
 
     def has_won(player, opponent):
         """
-        This function will be used to figure out who has won the round either the user or the opponent
+        This function will be used to figure out who has won the 
+        round either the user or the opponent
         """
-        if (player == "rock" and opponent == "scissors") or (player == "scissors" and opponent == "paper") or (player == "paper" and opponent == "rock"):
+        if (player == "rock" and opponent == "scissors") or \
+           (player == "scissors" and opponent == "paper") \
+           or (player == "paper" and opponent == "rock"):
             return True
     
     players_score = 0
     computers_score = 0
 
     username = get_username()
-    print(f"Welcome to Rock | Paper | Scissors {username}, we hope you have a fun time")
+    print(f"Welcome to Rock | Paper | Scissors {username}, \
+    we hope you have a fun time")
 
     while True:
         try:
@@ -63,7 +81,7 @@ def main():
             if any(players_input in choice for choice in input_choices):
                 print(f"You have chosen {players_input}")
 
-                computers_choice = random.choice("rock", "paper", "scissors")
+                computers_choice = random.choice(["rock", "paper", "scissors"])
                 print(f"The computer has chosen {computers_choice}")
 
                 has_won(players_input, computers_choice)
@@ -86,5 +104,6 @@ def main():
         except ValueError:
             print(f"Unfortunately that input was not valid\n Your input was {players_input}\n \
                 Please enter either rock, paper or scissors!")
+      
                     
 main()
