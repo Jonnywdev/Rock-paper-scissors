@@ -39,4 +39,52 @@ def main():
         show_losing_response = random.choice(list_of_losing_responses)
         return show_losing_response
 
-    def has_won():
+    def has_won(player, opponent):
+        """
+        This function will be used to figure out who has won the round either the user or the opponent
+        """
+        if (player == "rock" and opponent == "scissors") or (player == "scissors" and opponent == "paper") or (player == "paper" and opponent == "rock"):
+            return True
+    
+    players_score = 0
+    computers_score = 0
+
+    username = get_username()
+    print(f"Welcome to Rock | Paper | Scissors {username}, we hope you have a fun time")
+
+    while True:
+        try:
+            input_choices = {"rock", "paper", "scissors"}
+            players_input = input("Please type your choice")
+
+            winning_response = get_winning_response()
+            losing_response = get_losing_response()
+
+            if any(players_input in choice for choice in input_choices):
+                print(f"You have chosen {players_input}")
+
+                computers_choice = random.choice("rock", "paper", "scissors")
+                print(f"The computer has chosen {computers_choice}")
+
+                has_won(players_input, computers_choice)
+                if players_input == computers_choice:
+                    print("Ahh it's a draw! \n")
+                    print(f"{username} score is: {players_score} \
+                        \nComputers score is: {computers_score}\n")
+                elif has_won(players_input, computers_choice):
+                    print(f"You did it, you won! \n {winning_response} \n")
+                    players_score = players_score + 1
+                    print(f"{username} score is: {players_score} \
+                        \nComputers score is: {computers_score}\n")
+                elif has_won(computers_choice, players_input):
+                    print(f"You lose! \n{losing_response} \n")
+                    computers_score = computers_score + 1 
+                    print(f"{username} score is: {players_score} \
+                        \nComputers score is: {computers_score}\n")
+            else:
+                raise ValueError()
+        except ValueError:
+            print(f"Unfortunately that input was not valid\n Your input was {players_input}\n \
+                Please enter either rock, paper or scissors!")
+                    
+main()
