@@ -81,7 +81,7 @@ At the end of the project I used 1 website to validate the code.
 [Back to Table of contents](#table-of-contents)
 
 # Deployment
-The site was deployed via Heroku, and the live link can be found here - [Rock, Paper, Scissors Link]()
+The site wasn't deployed via Heroku (Internal Server Error) 
 
 ### Project Deployment
 To deploy the project through Heroku I followed these steps:
@@ -99,11 +99,15 @@ To deploy the project through Heroku I followed these steps:
 - Next navigate back to the deploy tab using the submenu at the top of the page.
 - In the deployment method section select the GitHub - Connect to GitHub button and follow the steps prompted if any to connect your GitHub account
 - In the Connect to GitHub section that appears, select the correct account, and enter the name of the repository and select search.
-- Once Heroku has located the repo select connect.
-- This will connect the repo to the app within Heroku. Below the Apps Connected to Heroku section will be the Automatic Deploys section.
-- In this section, confirm the correct branch of the repo is selected in the drop-down box, and then click the Enable Automatic Deploys button
-- This will ensure whenever you change something in the repo and push the changes to GitHub, Heroku will rebuild the app. If you prefer to do this manually you can utilise the manual deployment options further down. For this project I utilised the Automatic Deployment to enable me to check changes I made to the app as I developed it.
-- Heroku will now build the app for you. Once it has completed the build process you will see a 'Your App Was Successfully Deployed' message and a link to the app to visit the live site.
+
+
+
+However I could not make it past this point, no matter what I tried and what research I did it would continue to throw up the error of Internal Server Error. I have tried to get in contact with student support and my mentor. However with it being Easter I haven't been able to recieve any help.
+
+Therefore my code is not deployed and with my deadline in 1 hour I cant see any way for me to get it deployed. I have scheduled a call wit student services so hopefully this will be fixed before anyone has to read this.
+
+![Heroku not working](assets/images/cant-deploy.png)
+
 
 [Back to Table of contents](#table-of-contents)
 
