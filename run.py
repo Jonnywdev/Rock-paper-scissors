@@ -19,7 +19,7 @@ def main():
         This function will be used to get the players username.
         """
         username = input("Please enter a username to get started \n")
-        return username 
+        return username
 
     def get_winning_response():
         """
@@ -35,7 +35,7 @@ def main():
 
         show_winning_response = random.choice(list_of_winning_responses)
         return show_winning_response
-    
+
     def get_losing_response():
         """
         This function will produce a random
@@ -61,7 +61,7 @@ def main():
            (player == "scissors" and opponent == "paper") \
            or (player == "paper" and opponent == "rock"):
             return True
-  
+
     players_score = 0
     computers_score = 0
 
