@@ -72,7 +72,7 @@ def main():
     while True:
         try:
             input_choices = {"rock", "paper", "scissors"}
-            players_input = input("Please type your choice ").lower()
+            players_input = input("Please type your choice \n").lower()
 
             winning_response = get_winning_response()
             losing_response = get_losing_response()
